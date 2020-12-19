@@ -9,6 +9,7 @@ class Question
         @question = question
         @correct_answer = correct_answer 
         @incorrect_answer = incorrect_answer
+        @answers = []
         @answers << correct_answer
         @answers << incorrect_answer
         save
