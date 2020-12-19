@@ -26,9 +26,4 @@ class Question
     def save
         @@all << self
     end 
-
-  
-
-
-
-        
+end
