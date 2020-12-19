@@ -4,9 +4,9 @@ class API
         resp = RestClient.get('https://opentdb.com/api_category.php')
         hash = JSON.parse(resp.body,symbolize_names:true)
         categories_array = hash[:trivia_categories]
-        categories_array.each do |category|
-            id = category[:id]
-            name = category[:name]
+        categories_array.each do |c|
+            id = c[:id]
+            name = c[:name]
             Category.new(id, name)
         end 
     end
