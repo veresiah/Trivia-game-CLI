@@ -16,11 +16,10 @@ class API
         hash = JSON.parse(resp.body,symbolize_names:true)
         quest_array = hash[:results]
         category = question_array[0][:category] 
-        type = question_array[0][:type]
         difficulty = question_array[0][:difficulty]
         question = question_array[0][:question]
         correct_answer = question_array[0][:correct_answer]
         incorrect_answer = question_array[0][incorrect_answers]
-        Question.new(category, type, difficulty, question, correct_answer, incorrect_answer)
+        Question.new(category, difficulty, question, correct_answer, incorrect_answer)
     end 
 end 
