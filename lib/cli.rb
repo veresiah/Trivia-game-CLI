@@ -22,6 +22,9 @@ class CLI
         end 
     end 
 
+    #def main_menu
+    #end 
+
     def goodbye
         sleep(2)
         puts "Thank you for playing. See you soon. Goodbye"
